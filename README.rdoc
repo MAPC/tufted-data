@@ -1,3 +1,13 @@
 == README
 
-Tufted-data allows Tufted to connect to a database by providing an HTTP API for any relationship database. 
+Typical Rails app - connect to any database via database.yml. To access that data, for example:
+
+  http://localhost:3000/tables/mydata
+
+will yield a JSON representation of that table. 
+
+Other features:
+Accept particular SQL statements through the URL
+  http://localhost:3000/tables/SELECT 10
+  http://localhost:3000/tables/SELECT * WHERE town="BOSTON"
+
