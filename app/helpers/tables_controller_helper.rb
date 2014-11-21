@@ -1,0 +1,2 @@
+module TablesControllerHelper
+end
