@@ -9,5 +9,11 @@ will yield a JSON representation of that table.
 Other features:
 Accept particular SQL statements through the URL
   http://localhost:3000/tables/SELECT 10
-  http://localhost:3000/tables/SELECT * WHERE town="BOSTON"
+  http://localhost:3000/tables/SELECT * FROM fmr WHERE municipal='Boston'
+
+Security:
+Probably the safest way to use this tool is to simply set up a highly restricted read-only user in postgres. This allows only READ operations on the database. 
+
+Other issues:
+Next steps would be to implement pagination and improve the api. The API could factor out typical SQL statements into URL parameters (table?select=*&?where="{municipal: 'Boston'"). Maybe just be worth our time to accept regular SQL statements for now. 
 
