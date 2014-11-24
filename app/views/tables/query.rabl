@@ -1,0 +1,1 @@
+object @table.as_json

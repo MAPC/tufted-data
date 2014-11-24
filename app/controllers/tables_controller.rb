@@ -4,7 +4,9 @@ class TablesController < ApplicationController
   end
 
   def query
-    @table = TableFactory.set_table(params[:table_name]).all
-    ActiveRecord::Base.connection.execute(:query)
+    # @table = TableFactory.set_table(params[:table_name]).all
+    @query = params[:query]
+    @table = ActiveRecord::Base.connection.execute(@query)
+    render json: @table.as_json
   end
 end
