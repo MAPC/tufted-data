@@ -6,8 +6,14 @@ gem 'rails', '4.1.4'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 gem 'pg'
-gem 'sequel-rails'
+# gem 'sequel-rails'
 gem 'rabl'
+
+# gem 'postgres_ext'
+
+gem 'postgres_ext-serializers'
+gem 'kaminari'
+gem 'api-pagination'
 # gem 'oj'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
